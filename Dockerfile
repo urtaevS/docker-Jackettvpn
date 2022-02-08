@@ -44,7 +44,7 @@ RUN echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.li
     iptables \
     jq \
     kmod \
-    libicu63 \
+    libicu67 \
     moreutils \
     net-tools \
     openresolv \
