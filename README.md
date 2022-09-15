@@ -31,13 +31,15 @@ $ docker run --privileged  -d \
               dyonr/jackettvpn
 ```
 
+
+docker-compose.yml
+
 ```
 version: '3'
 services:
-  privileged:
+  jackettvpn:
     container_name: jackettvpn
     image: dyonr/jackettvpn:latest
-    restart: unless-stopped
     ports:
       - 9117:9117
     volumes:
@@ -47,6 +49,7 @@ services:
       - VPN_ENABLED=yes
       - VPN_TYPE=wireguard
       - LAN_NETWORK=192.168.0.0/24
+    restart: unless-stopped
 ```
 
 # Variables, Volumes, and Ports
