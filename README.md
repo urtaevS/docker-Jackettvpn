@@ -53,6 +53,12 @@ services:
     restart: unless-stopped
 ```
 
+If you need to update the image to new version of Jackett run:
+
+```
+docker-compose up --force-recreate --build -d && docker image prune
+```
+
 # Variables, Volumes, and Ports
 ## Environment Variables
 | Variable | Required | Function | Example | Default |
