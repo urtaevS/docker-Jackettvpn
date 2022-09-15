@@ -31,6 +31,24 @@ $ docker run --privileged  -d \
               dyonr/jackettvpn
 ```
 
+```
+version: '3'
+services:
+  privileged:
+    container_name: jackettvpn
+    image: dyonr/jackettvpn:latest
+    restart: unless-stopped
+    ports:
+      - 9117:9117
+    volumes:
+      - /your/config/path/:/config
+      - /your/downloads/path/:/blackhole
+    environment:
+      - VPN_ENABLED=yes
+      - VPN_TYPE=wireguard
+      - LAN_NETWORK=192.168.0.0/24
+```
+
 # Variables, Volumes, and Ports
 ## Environment Variables
 | Variable | Required | Function | Example | Default |
