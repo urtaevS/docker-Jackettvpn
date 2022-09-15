@@ -38,6 +38,7 @@ docker-compose.yml
 version: '3'
 services:
   jackettvpn:
+    privileged: true
     container_name: jackettvpn
     image: dyonr/jackettvpn:latest
     ports:
